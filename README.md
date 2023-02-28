@@ -1,4 +1,4 @@
-# siap_undip_remake
+# Aplikasi Marketing kelas A
 
 A new Flutter project.
 
