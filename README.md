@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+
+Belum Selesai Bang belum ada Controllernya, blm di route.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
