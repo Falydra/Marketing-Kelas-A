@@ -36,13 +36,14 @@ class MyHomePage extends StatelessWidget {
                 decoration: const BoxDecoration(color: Colors.blueAccent),
                 child: Center(
                     child: SizedBox(
-                  height: 160.0,
+                  height: 248.0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                         height: 120.0,
                         width: 320.0,
+                        margin: const EdgeInsets.only(top: 40.0),
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(12.0)),
@@ -52,45 +53,15 @@ class MyHomePage extends StatelessWidget {
                         ),
                         child: const Align(alignment: Alignment.center),
                       ),
-                    ],
-                  ),
-                )),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 45.0,
-                    width: 330.0,
-                    decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(1.0),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(24.0))),
-                    child: const TextField(
-                        decoration: InputDecoration(
-                      hoverColor: Colors.grey,
-                      labelText: "   Search...",
-                    )),
-                  ),
-                ],
-              ),
-              Center(
-                child: SizedBox(
-                  height: 470.0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // Container(
-                      //   height: 100.0,
-                      //   width: 316.0,
-                      //   decoration: BoxDecoration(
-                      //       color: const Color.fromARGB(255, 255, 255, 255)
-                      //           .withOpacity(1.0),
-                      //       borderRadius:
-                      //           const BorderRadius.all(Radius.circular(32.0))),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: [
+                      //     Text("Siap Undip", style: TextStyle(color: Colors.white),)
+                      //   ],
                       // ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      Container(
+                        height: 80,
+                        margin: const EdgeInsets.only(top: 8.0),
                         child: SizedBox(
                           width: 300.0,
                           child: Row(
@@ -131,24 +102,79 @@ class MyHomePage extends StatelessWidget {
                                         Radius.circular(8.0)),
                                     color: Colors.white.withOpacity(0.8),
                                     boxShadow: []),
+                                // child: Row(
+                                //   mainAxisAlignment: MainAxisAlignment.center,
+                                //   children: const [
+                                //     Text(
+                                //       "Siap Undip",
+                                //       style: TextStyle(
+                                //           color: Colors.black, fontSize: 12.0),
+                                //     ),
+                                //   ],
                               ),
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //   children: [
+                      //     Text(
+                      //       "Siap Undip",
+                      //       style: TextStyle(fontSize: .0),
+                      //     )
+                      //   ],
+                      // ),
+                    ],
+                  ),
+                )),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 10.0),
+                    height: 32.0,
+                    width: 320.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(1.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(24.0))),
+                    child: TextFormField(
+                        decoration: const InputDecoration(
+                      contentPadding: EdgeInsets.only(bottom: 12.0),
+                      border: InputBorder.none,
+                      hoverColor: Colors.grey,
+                      hintText: "   Search...",
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.black,
+                      ),
+                    )),
+                  ),
+                  // Icon(Icons.search, color: Colors.black, size: 12.0,),
+                ],
+              ),
+              Center(
+                child: SizedBox(
+                  height: 270.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Container(
+                      //   height: 100.0,
+                      //   width: 316.0,
+                      //   decoration: BoxDecoration(
+                      //       color: const Color.fromARGB(255, 255, 255, 255)
+                      //           .withOpacity(1.0),
+                      //       borderRadius:
+                      //           const BorderRadius.all(Radius.circular(32.0))),
+                      // ),
                     ],
                   ),
                 ),
               ),
             ],
-          ),
-          Container(
-            height: 40.0,
-            width: 40.0,
-            decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                color: Colors.blueAccent.withOpacity(0.8),
-                boxShadow: []),
           ),
           const ScrollField(),
         ]),
@@ -177,27 +203,15 @@ class ScrollField extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(16.0))),
               height: 108.0,
               width: 338.0,
-              child: Row(children: const [
-                Text(
-                  "Today Task",
-                  style: TextStyle(color: Colors.white),
-                )
-              ]),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Container(
-              padding: const EdgeInsets.all(10.0),
-              alignment: Alignment.topLeft,
-              decoration: BoxDecoration(
-                  color: Colors.blueAccent.withOpacity(1.0),
-                  borderRadius: const BorderRadius.all(Radius.circular(16.0))),
-              height: 108.0,
-              width: 338.0,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text("Today Task", style: TextStyle(color: Colors.white)),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                    size: 18.0,
+                  )
                 ],
               ),
             ),
@@ -216,7 +230,11 @@ class ScrollField extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text("Today Task", style: TextStyle(color: Colors.white)),
-                  Icon(Icons.arrow_forward_ios)
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                    size: 18.0,
+                  )
                 ],
               ),
             ),
@@ -232,8 +250,37 @@ class ScrollField extends StatelessWidget {
               height: 108.0,
               width: 338.0,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text("Today Task", style: TextStyle(color: Colors.white)),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                    size: 18.0,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              padding: const EdgeInsets.all(10.0),
+              alignment: Alignment.topLeft,
+              decoration: BoxDecoration(
+                  color: Colors.blueAccent.withOpacity(1.0),
+                  borderRadius: const BorderRadius.all(Radius.circular(16.0))),
+              height: 108.0,
+              width: 338.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text("Today Task", style: TextStyle(color: Colors.white)),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                    size: 18.0,
+                  )
                 ],
               ),
             ),
